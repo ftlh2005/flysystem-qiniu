@@ -13,7 +13,7 @@ $domain = ''; // or with protocol: https://xxxx.bkt.clouddn.com
 
 $adapter = new QiniuAdapter($accessKey, $secretKey, $bucket, $domain);
 
-$flysystem = new League\Flysystem\Filesystem($adapter);
+$flysystem = new Filesystem($adapter);
 try {
     $flysystem->write('file.md', 'contents');
     $s = $adapter->getUrl('file.md');
