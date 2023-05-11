@@ -79,7 +79,6 @@ class QiniuAdapter implements FilesystemAdapter
             $mime,
             $path
         );
-
         if ($error) {
             throw UnableToWriteFile::atLocation($path, $error->message());
         }
